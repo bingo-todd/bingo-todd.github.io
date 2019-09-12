@@ -1,0 +1,6 @@
+[submodule "repositories/Auditory-model"]
+	path = repositories/Auditory-model
+	url = https://github.com/bingo-todd/Auditory-model.git
+[submodule "repositories/Gammatone-filters"]
+	path = repositories/Gammatone-filters
+	url = https://github.com/bingo-todd/Gammatone-filters.git
