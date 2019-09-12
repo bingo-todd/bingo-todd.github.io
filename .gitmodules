@@ -1,0 +1,3 @@
+[submodule "notes/Gammatone-filter"]
+	path = repositories/Gammatone-filter
+	url = git@github.com:bingo-todd/Gammatone-filters.git

@@ -8,4 +8,6 @@
 
 ## Part II: Repositories
 
+  - [Gammatone filter](repositories/Gammatone-filter/README.md)
+
   - [Auditory model](repositories/Auditory-model/README.md)
