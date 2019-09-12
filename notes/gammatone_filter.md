@@ -43,7 +43,7 @@ $$
   \begin{equation}
   \begin{aligned}
   N &= \int_{cf_{low}}^{cf_{high}}{\frac{1}{Stepfactor\times ERB(f)}df}\\
-  &= \left.\frac{1}{Stepfactor}\log{ERB(f)}\frac{1}{{\partial ERB(f)}/{\partial f}} \right|_{cf_{low}}^{f_{high}}\\
+  &= \left.\frac{1}{Stepfactor}\log{ERB(f)}\frac{1}{(\partial ERB(f))/(\partial f)} \right|_{cf_{low}}^{f_{high}}\\
   &= \left.\frac{\log(\frac{f}{Q_{Ear}}+BW_{min})Q_{Ear}}{Stepfactor}\right|_{f_{low}}^{f_{high}}\\
   &= \left.\frac{\log(f+Q_{Ear} BW_{min})Q_{Ear}-Q_{Ear} \log{Q_{Ear}}}{Stepfactor}\right|_{cf_{low}}^{cf_{high}}\\
   &=\frac{Q_{Ear}}{Stepfactor}\log{\left(\frac{cf_{high}+Q_{Ear} BW_{min}}{cf_{low}+Q_{Ear} BW_{min}}\right)}
