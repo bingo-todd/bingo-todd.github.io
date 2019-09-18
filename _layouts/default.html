@@ -1,0 +1,21 @@
+{% include header.html %}
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<div class="wrap">
+    <div class="container-fluid  container-left">
+        <div class="row">
+            <div class="col-md-2 hidden-xs">
+                {% include sidebar.html %}
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-8">
+                {{ content }}
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+</div>
