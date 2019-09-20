@@ -23,12 +23,9 @@ Google云提供新用户1年的试用期以及300$的试用金。
 试用结束后，可以选择升级为付费用户（没有月租，使用资源就扣费），这时候GCP也会提供一定量的免费资源。
 
 #### 免费资源的限制条件
-<table>
-<tr>
-<td><img src="/assets/images/gcp_shadowsocks/lifelong-free.png" width="60%"></td>
-<td><img src="/assets/images/gcp_shadowsocks/limit-lifelong-free.png" width="60%"></td>
-</tr>
-</table>
+
+<img src="/assets/images/gcp_shadowsocks/lifelong-free.png" width="60%">
+<img src="/assets/images/gcp_shadowsocks/limit-lifelong-free.png" width="60%">
 
 免费资源之外的收费标准（每月）
 <table>
