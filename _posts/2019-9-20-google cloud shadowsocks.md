@@ -1,7 +1,6 @@
 # Google Cloud Platform 搭建shadowsocks server
 
 <!-- TOC -->
-
 - [购买](#%E8%B4%AD%E4%B9%B0)
   - [免费试用](#%E5%85%8D%E8%B4%B9%E8%AF%95%E7%94%A8)
   - [试用之后](#%E8%AF%95%E7%94%A8%E4%B9%8B%E5%90%8E)
@@ -10,18 +9,19 @@
   - [防火墙规则](#%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99)
   - [创建VM实例](#%E5%88%9B%E5%BB%BAvm%E5%AE%9E%E4%BE%8B)
   - [安装shadowsocks并启动ssserver](#%E5%AE%89%E8%A3%85shadowsocks%E5%B9%B6%E5%90%AF%E5%8A%A8ssserver)
-
 <!-- /TOC -->
 
 ## 购买
 
 ### 免费试用
 Google云提供新用户1年的试用期以及300$的试用金。
-<img src="/assets/images/gcp_shadowsocks/gcp-free-strategy.png" width="60%">
+
+<img src="/assets/images/gcp_shadowsocks/gcp-free-strategy.png" width="60%" >
 
 ### 试用之后
 
 试用结束后，可以选择升级为付费用户（没有月租，使用资源就扣费），这时候GCP也会提供一定量的免费资源。
+
 #### 免费资源的限制条件
 <table>
 <tr>
