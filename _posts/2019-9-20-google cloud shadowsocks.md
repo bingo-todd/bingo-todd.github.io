@@ -16,7 +16,7 @@
 ### 免费试用
 Google云提供新用户1年的试用期以及300$的试用金。
 
-<img src="/assets/images/gcp_shadowsocks/gcp-free-strategy.png" width="60%" >
+<img src="/assets/images/gcp_shadowsocks/gcp-free-strategy.png">
 
 ### 试用之后
 
@@ -24,50 +24,12 @@ Google云提供新用户1年的试用期以及300$的试用金。
 
 #### 免费资源的限制条件
 
-<img src="/assets/images/gcp_shadowsocks/lifelong-free.png" width="60%">
-<img src="/assets/images/gcp_shadowsocks/limit-lifelong-free.png" width="60%">
+<img src="/assets/images/gcp_shadowsocks/lifelong-free.png" >
+<img src="/assets/images/gcp_shadowsocks/limit-lifelong-free.png">
 
 免费资源之外的收费标准（每月）
+<img src="/assets/images/gcp_shadowsocks/gcp-price.png">
 
-<table>
-<tbody>
-<tr>
-<th>流量来源-目的地地理位置</th>
-<th>0-10 TB</th>
-<th>10-150 TB</th>
-<th>150-500 TB</th>
-</tr>
-<tr>
-<th>北美洲-北美洲、欧洲-欧洲</th>
-<td>$0.105</td>
-<td>$0.08</td>
-<td>$0.06</td>
-</tr>
-<tr>
-<th>亚洲-亚洲</th>
-<td rowspan="4" align="center" valign="middle">$0.12</td>
-<td rowspan="4" align="center" valign="middle">$0.085</td>
-<td rowspan="4" align="center" valign="middle">$0.08</td>
-<tr>
-<th>大洋洲-大洋洲</th>
-</tr>
-<tr>
-<th>南美洲-南美洲</th>
-</tr>
-<tr>
-<th>洲际<br>（不包括进出大洋洲和中国的流量）</th>
-</tr>
-<tr>
-<th>进出大洋洲的洲际流量</th>
-<td rowspan="2" align="center" valign="middle">$0.19</td>
-<td rowspan="2" align="center" valign="middle">$0.16</td>
-<td rowspan="2" align="center" valign="middle">$0.15</td>
-</tr>
-<tr>
-<th>任何位置-中国</th>
-</tr>
-</tbody>
-</table>
 
 ## 搭建Shadowsocks服务器
 ### 防火墙规则
