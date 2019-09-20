@@ -1,13 +1,29 @@
-google cloud platform shadowsocks
+# Google Cloud Platform 搭建shadowsocks server
 
-# 价格
+<!-- TOC -->
 
+- [Google Cloud Platform 搭建shadowsocks server](#google-cloud-platform-%E6%90%AD%E5%BB%BAshadowsocks-server)
+  - [购买](#%E8%B4%AD%E4%B9%B0)
+    - [免费试用](#%E5%85%8D%E8%B4%B9%E8%AF%95%E7%94%A8)
+    - [试用之后](#%E8%AF%95%E7%94%A8%E4%B9%8B%E5%90%8E)
+      - [免费资源的限制条件](#%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%E7%9A%84%E9%99%90%E5%88%B6%E6%9D%A1%E4%BB%B6)
+  - [搭建Shadowsocks服务器](#%E6%90%AD%E5%BB%BAshadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8)
+    - [防火墙规则](#%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99)
+    - [创建VM实例](#%E5%88%9B%E5%BB%BAvm%E5%AE%9E%E4%BE%8B)
+    - [安装shadowsocks并启动ssserver](#%E5%AE%89%E8%A3%85shadowsocks%E5%B9%B6%E5%90%AF%E5%8A%A8ssserver)
+
+<!-- /TOC -->
+
+## 购买
+
+### 免费试用
 Google云提供新用户1年的试用期以及300$的试用金。
 <img src="/assets/images/gcp_shadowsocks/gcp-free-strategy.png" width="60%">
 
-试用结束后，可以选择升级为付费用户（没有月租，使用资源就扣费），这时候GCP也会提供一定量的免费资源。
+### 试用之后
 
-# 免费资源的限制条件
+试用结束后，可以选择升级为付费用户（没有月租，使用资源就扣费），这时候GCP也会提供一定量的免费资源。
+#### 免费资源的限制条件
 <table>
 <tr>
 <td><img src="/assets/images/gcp_shadowsocks/lifelong-free.png" width="60%"></td>
@@ -57,13 +73,13 @@ Google云提供新用户1年的试用期以及300$的试用金。
 </table>
 
 
-# 搭建Shadowsocks服务器
-## 防火墙规则
+## 搭建Shadowsocks服务器
+### 防火墙规则
 
 <img src="/assets/images/gcp_shadowsocks/firewall-rules.png" width="60%">
 
-## 创建VM实例
-## 安装shadowsocks并启动ssserver
+### 创建VM实例
+### 安装shadowsocks并启动ssserver
 - VM中安装了python3，但是没有pip。首先安装pip
 ```shell
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
