@@ -28,6 +28,7 @@ Google云提供新用户1年的试用期以及300$的试用金。
 <img src="/assets/images/gcp_shadowsocks/limit-lifelong-free.png" width="60%">
 
 免费资源之外的收费标准（每月）
+
 <table>
 <tbody>
 <tr>
@@ -67,7 +68,6 @@ Google云提供新用户1年的试用期以及300$的试用金。
 </tr>
 </tbody>
 </table>
-
 
 ## 搭建Shadowsocks服务器
 ### 防火墙规则
