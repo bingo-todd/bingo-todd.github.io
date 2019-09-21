@@ -7,6 +7,16 @@ author: Todd
 description: Gammatone filter
 ---
 
+<!-- TOC -->
+
+- [Gammatone-filters](#gammatone-filters)
+  - [Basic ideas [^Holdsworth1988]](#basic-ideas-%5Eholdsworth1988)
+  - [Usage](#usage)
+  - [Buildin examples](#buildin-examples)
+  - [About efficiency](#about-efficiency)
+
+<!-- /TOC -->
+
 # Gammatone-filters
 Python implementation of Gammatone filter.
 
@@ -21,10 +31,10 @@ $$
 
 in which
 
-- $$f_c$$: center frequency
-- $$b$$ : bandwidth,
+- $f_c$: center frequency
+- $b$= : bandwidth,
 
-$$g(t)$$ can be regarded as the mutliplication result of two parts,
+$g(t)$ can be regarded as the mutliplication result of two parts,
 
 $$
 \begin{equation}
@@ -57,7 +67,7 @@ S(f)=FT\left(cos(2\pi f_ct+\phi)\right)
 \end{equation}
 $$
 
-Combine equation (2) and (3), we can get $$G(f)$$
+Combine equation (2) and (3), we can get $G(f)$
 
 $$
 \begin{equation}
@@ -69,12 +79,13 @@ G(f)&=a \times R(f)*S(f)\\
 \end{equation}
 $$
 
-As shown in the following diagram,$$G(f)$$ consists of two symmetric parts. For simplicity, only positive frequency side is considered
+As shown in the following diagram,$G(f)$ consists of two symmetric parts. For simplicity, only positive frequency side is considered
 
-<img src="/assets/images/Gammatone-filters/gtf-ir-spectrum.png" width="60%">
+<center><img src="/assets/images/Gammatone-filters/gtf-ir-spectrum.png" width="60%"></center>
 
 Further more, Gammatone filter can be regarded as low-pass filter with frequency shitfted by fc. Now, equalently, we can first shift input signal by -fc and filter it with a lowpass filter, finally shift the frequency by fc.
 
+<center><img src=/assets/images/Gammatone-filters/diagram.png ></center>
 ![diagram](/assets/images/Gammatone-filters/diagram.png)
 
  The detailed derivation is in [README.pdf](README.pdf)
@@ -140,11 +151,11 @@ Further more, Gammatone filter can be regarded as low-pass filter with frequency
 
   Only filter with cf=4kHz is ploted
 
-  ![delays_gains](/assets/images/Gammatone-filters/filter_spectrum.png)
+  <center><img src="/assets/images/Gammatone-filters/filter_spectrum.png"></center>
 
 - Delays and gains at cfs
 
-  ![delay_gain.png](/assets/images/Gammatone-filters/delay_gain.png)
+  <center><img src="/assets/images/Gammatone-filters/delay_gain.png"></center>
 
   Basically, the phase delay at center frequency approximates 0.
 
@@ -152,17 +163,17 @@ Further more, Gammatone filter can be regarded as low-pass filter with frequency
 
   - Max-amplitude normalized
 
-    ![ir.png](/assets/images/Gammatone-filters/ir.png)
+    <center><img src="/assets/images/Gammatone-filters/ir.png"></center>
 
   - Gain normalization
 
-    ![ir_norm](/assets/images/Gammatone-filters/ir_norm.png)
+    <center><img src="/assets/images/Gammatone-filters/ir_norm.png"></center>
 
   - Phase compensation
 
     Phase compensation is actually to align impulse response peaks of all filter[^Brown1994].
 
-    ![ir_norm_aligned](/assets/images/Gammatone-filters/ir_norm_aligned.png)
+    <center><img src="/assets/images/Gammatone-filters/ir_norm_aligned.png"></center>
 
     <!-- Next, I want to make summary about signal recovery after filtered by Gammatone filters.[Flag] -->
 
