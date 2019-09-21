@@ -10,7 +10,7 @@ description: Gammatone filter
 <!-- TOC -->
 
 - [Gammatone-filters](#gammatone-filters)
-  - [Basic ideas [^Holdsworth1988]](#basic-ideas-%5Eholdsworth1988)
+  - [Basic ideas](#basic-ideas-%5Eholdsworth1988)
   - [Usage](#usage)
   - [Buildin examples](#buildin-examples)
   - [About efficiency](#about-efficiency)
