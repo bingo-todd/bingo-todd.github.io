@@ -84,12 +84,16 @@
 ## 安装cuDNN
 
   其实只需要将其中的文件copy到cuda安装目录下就可以了
+  
   ```shell
   sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
   sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
   ```
 
-  `import tensorflow`能运行但是warning，没有加载很多`xxx.so.10.0`文件，其实lib64目录下有对应的`xxx.so.10`以及其他同名但后缀不同的文件/link，可以在该文件夹下创建`xxx.so.10.0`链接到'xxx.so'。不过,该文件夹下并没有`libbulas.so`文件，而系统其实已经在某处安装，因此只需要找到并链接到该文件即可
+  `import tensorflow`能运行但是warning，没有加载很多`xxx.so.10.0`文件，其实lib64目录下有对应的`xxx.so.10`以及其他同名但后缀不同的文件/link，可以在该文件夹下创建`xxx.so.10.0`链接到'xxx.so'。
+
+  不过,该文件夹下并没有`libbulas.so`文件，而系统其实已经在某处安装，因此只需要找到并链接到该文件即可
+
   ```shell
   $ ldconfig -p | grep cublas
 
@@ -107,3 +111,33 @@
   ```shell
   pip install tensorflow-gpu
   ```
+  目前`tensorflow=1.14.0`与`numpy>1.16`存在兼容问题（import tensorflow时报错）。可以制定numpy的版本重新安装
+  ```shell
+  pip install 'numpy<1.17'
+  ```
+
+### 验证tensorflow是否在使用gpu
+
+  tensorflow查看可用设备
+
+  - 查看本机设备
+
+    ```python
+    from tensorflow.python.client import device_lib
+    local_device_protos = device_lib.list_local_devices()
+    print(local_device_protos)
+    ```
+
+  - 通过tensorflow查看gpu信息
+    ```python
+    import tensorflow as tf
+    gpu_device_name = tf.test.gpu_device_name()
+    print(gpu_device_name)
+    ```
+
+  - 测试tensorflow是否使用gpu
+
+    ```python
+    import tensorflow as tf
+    tf.test.is_gpu_available()
+    ```
