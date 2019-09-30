@@ -113,10 +113,11 @@ description: Implementation Gammatone filter bank
 
   滤波器幅频曲线示意图如下
 
-  <figure align=center>
+  <!-- <figure align=center>
    <img src='/assets/images/gtf_baseband_implementation/gtf-diagram.png' width=400px>
    <a name="gtf_diagram">  </a>
-  </figure>
+  </figure> -->
+   <img src='/assets/images/gtf_baseband_implementation/gtf-diagram.png' width=400px>
 
 
 ## 3dB带宽 & ERB
@@ -143,9 +144,10 @@ b \approx \frac{48}{15\pi}ERB(f_c) \approx 1.019 ERB(f_c)
 
 以 $$cf=4 kHz$$ 的滤波器为例，$$G(f)$$ 对应的幅频、相频响应曲线如下
 
-<div align=center>
+<!-- <div align=center>
 <img align=center src='/assets/images/gtf_baseband_implementation/filter_spectrum.png' widht=600px>
-</div>
+</div> -->
+<img align=center src='/assets/images/gtf_baseband_implementation/filter_spectrum.png' widht=600px>
 
 在中心频率处，即 $$f=f_c$$，Gammatone滤波器的增益 $$G(f_c)$$ 可计算得到
 
@@ -193,10 +195,11 @@ Gain_{f_c} &= \frac{3}{(2\pi b)^4}\frac{\sqrt{(16Q^4-24Q^2+2)^2+(8Q-32Q^3)^2}}{\
 
 不同中心频率处的增益和相移如下
 
-<figure align=center>
+<!-- <figure align=center>
  <img src='/assets/images/gammatone_filters/delay_gain.png'>
  <a name="gtf_diagram">  </a>
-</figure>
+</figure> -->
+<img src='/assets/images/gammatone_filters/delay_gain.png'>
 
 
 根据Glassberg & Moore[^Glasberg_Brian1990] 给出的ERB的公式
