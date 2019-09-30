@@ -1,9 +1,0 @@
-I"<p>冲击响应不变法设计IIR滤波器</p>
-
-<p>对于模拟滤波器的冲击响应 $h(t)$，以时间间隔T对其进行采样，得到对应的数字滤波器，即
-<script type="math/tex">\begin{equation}
-\begin{aligned}
-h(n) = h()
-\end{aligned}
-\end{equation}</script></p>
-:ET

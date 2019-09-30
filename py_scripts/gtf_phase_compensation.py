@@ -3,7 +3,7 @@ import numpy as np
 import sys
 import os
 
-fig_dir = "..\assets\images\`gtf_phase_compensation"
+fig_dir = "..\assets\images\gtf_phase_compensation"
 if not os.path.exists(fig_dir):
     os.makedirs(fig_dir)
 

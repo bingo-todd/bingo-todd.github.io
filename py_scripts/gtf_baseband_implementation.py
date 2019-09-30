@@ -17,13 +17,9 @@ def main():
     fs = 16e3
     gtf_filter = gtf(fs=fs,cf_low=50,cf_high=5e3,n_band=16)
 
-    ir_equation = gtf_filter.get_ir_equation()
-    fig = plt.figure()
-    axes = fig.subplots(1,1)
-    irs_len = np.int16(0.1*fs)
-    t = np.arange(irs_len)/fs
-    axes.plot(t,ir_equation[:,:irs_len].T)
-    savefig(fig,'irs_equation.png')
+    # spectrum of one gtf
+    fig = gtf_filter.plot_filter_spectrum()
+    savefig(fig,'filter_spectrum.png')
 
     # delay and gain at cfs
     fig = gtf_filter.plot_delay_gain_cfs()
