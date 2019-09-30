@@ -117,7 +117,7 @@ description: Implementation Gammatone filter bank
    <img src='/assets/images/gtf_baseband_implementation/gtf-diagram.png' width=400px>
    <a name="gtf_diagram">  </a>
   </figure> -->
-   <img src='/assets/images/gtf_baseband_implementation/gtf-diagram.png' width=400px>
+   <img src='/assets/images/gtf_baseband_implementation/gtf-diagram.png'>
 
 
 ## 3dB带宽 & ERB
