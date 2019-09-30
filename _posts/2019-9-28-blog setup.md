@@ -1,13 +1,23 @@
 ---
 layout: post
-title:  "jekyll setup"
+title:  "blog setup"
 categories: network
 tags: blog
 author: Todd
 description: setup static blog using jekyllw
 ---
 
-## 安装gem环境
+<!-- TOC -->
+
+- [安装gem环境](#%E5%AE%89%E8%A3%85gem%E7%8E%AF%E5%A2%83)
+- [安装Jekyll](#%E5%AE%89%E8%A3%85jekyll)
+- [启动Jekyll](#%E5%90%AF%E5%8A%A8jekyll)
+
+<!-- /TOC -->
+
+使用jekyll托管blog，首先需要配置环境
+
+# 安装gem环境
 
 - Ubuntu &nbsp; [(official doc)](https://jekyllrb.com/docs/installation/ubuntu/)
 
@@ -34,14 +44,14 @@ description: setup static blog using jekyllw
     安装之后，在终端执行`ridk install`以安装`gem`以及扩展包
     > Run the `ridk install` step on the last stage of the installation wizard. This is needed for installing gems with native extensions.
 
-  - 安装Jekyll
+# 安装Jekyll
 
-    新打开一个命令行窗口（gem安装过程会将修改`PATH`，修改在之后的终端才起效）
-    ```shell
-    gem install jekyll bundler
-    ```
+  新打开一个命令行窗口（gem安装过程会将修改`PATH`，修改在之后的终端才起效）
+  ```shell
+  gem install jekyll bundler
+  ```
 
-## 启动Jekyll
+# 启动Jekyll
 
   可以使用`jekyll new blog_dir`初始化一个空白的blog，或者在github上下载别人的模板，
   `blog_dir`下启动服务
