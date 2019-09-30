@@ -23,8 +23,11 @@ lan: "en"
 paginate: 10
 
 highlighter: rouge
+
 markdown: kramdown
-# gems: ['jekyll-paginate']
+# markdown: CommonMark
+# markdown: CommonMarkGhPages
+
 plugins: [jekyll-paginate]
 
 exclude: ['README.md', 'LICENSE', "*.bak"]

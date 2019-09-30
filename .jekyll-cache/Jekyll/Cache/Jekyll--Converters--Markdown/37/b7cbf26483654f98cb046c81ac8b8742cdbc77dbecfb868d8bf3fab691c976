@@ -1,0 +1,125 @@
+I"è<h1 id="gammatone-filters">Gammatone-filters</h1>
+
+<p>Python implementation of Gammatone filter.</p>
+
+<p>The filtering part of code is written in C.</p>
+
+<h2 id="basic-ideas">Basic ideas</h2>
+<p><a href="2019-9-27-gtf_baseband_implementation.md">Gammatone implementation</a></p>
+
+<h2 id="usage">Usage</h2>
+
+<pre><code class="language-Python">  from GTF import GTF
+  gt_filter = GTF(fs=44100,low_cf=80,high_cf=5000,N_band=32)
+  x_filtered = gt_filter.filter_c(x,is_aligned=0)# not aligned
+</code></pre>
+
+<h2 id="buildin-examples">Buildin examples</h2>
+
+<p>In termial</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  python GTF.py example
+</code></pre></div></div>
+<pre><code class="language-Python">  #definition of example func
+  def example():
+      fs = 16e3
+      gt_filter = GTF(fs,freq_low=80,freq_high=5e3,N_band=16)
+
+      # delays and gains
+      fig = plt.figure()
+      gt_filter.cal_delay_gain_cfs(is_plot=True,fig=fig)
+      fig.savefig('/assets/images/Gammatone-filters/delay_gain.png')
+
+      # impulse response direct from equation
+      ir_equation = gt_filter.get_ir_equation()
+      ir_equation = ir_equation/np.max(np.abs(ir_equation))
+
+      # ir: filter impulse signal
+      ir = gt_filter.get_ir(is_gain_norm=False,is_aligned=False)
+      ir = ir/np.max(np.abs(ir))
+
+      #
+      ir_norm = gt_filter.get_ir(is_gain_norm=True,is_aligned=False)
+
+      # ir phase compensated
+      ir_norm_aligned = gt_filter.get_ir(is_gain_norm=True,is_aligned=True,delay_common=0)
+
+      # plot ir
+      if not os.path.exists('/assets/images/Gammatone-filters'):
+          os.mkdir('/assets/images/Gammatone-filters')
+
+      fig_ir_eq = gt_filter.plot_ir_spec(ir_equation)
+      fig_ir_eq.savefig('/assets/images/Gammatone-filters/ir_equation.png')
+
+      fig_ir = gt_filter.plot_ir_spec(ir)
+      fig_ir.savefig('/assets/images/Gammatone-filters/ir.png')
+
+      fig_norm = gt_filter.plot_ir_spec(ir_norm)
+      fig_norm.savefig('/assets/images/Gammatone-filters/ir_norm.png')
+
+      fig_ir_norm_aligned = gt_filter.plot_ir_spec(ir_norm_aligned)
+      fig_ir_norm_aligned.savefig('/assets/images/Gammatone-filters/ir_norm_aligned.png')
+
+      gt_filter.filter_spectrum()
+</code></pre>
+<ul>
+  <li>
+    <p>Spectrum of Gammatone filter</p>
+
+    <p>Only filter with cf=4kHz is ploted</p>
+
+    <center><img src="/assets/images/Gammatone-filters/filter_spectrum.png" /></center>
+  </li>
+  <li>
+    <p>Delays and gains at cfs</p>
+
+    <center><img src="/assets/images/Gammatone-filters/delay_gain.png" /></center>
+
+    <p>Basically, the phase delay at center frequency approximates 0.</p>
+  </li>
+  <li>
+    <p>Impulse response of Gammatone filters</p>
+
+    <ul>
+      <li>
+        <p>Max-amplitude normalized</p>
+
+        <center><img src="/assets/images/Gammatone-filters/ir.png" /></center>
+      </li>
+      <li>
+        <p>Gain normalization</p>
+
+        <center><img src="/assets/images/Gammatone-filters/ir_norm.png" /></center>
+      </li>
+      <li>
+        <p>Phase compensation</p>
+
+        <p>Phase compensation is actually to align impulse response peaks of all filter<sup id="fnref:Brown1994"><a href="#fn:Brown1994" class="footnote">1</a></sup>.</p>
+
+        <center><img src="/assets/images/Gammatone-filters/ir_norm_aligned.png" /></center>
+
+        <!-- Next, I want to make summary about signal recovery after filtered by Gammatone filters.[Flag] -->
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="about-efficiency">About efficiency</h2>
+
+<p>The key filter part is both written in c and python, and apparentlly, the c implementation is much fast</p>
+
+<p>Efficiency test</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$$</span> python GTF.py efficiency
+
+   <span class="nb">time </span>consumed<span class="o">(</span>s<span class="o">)</span>
+      c         :0.39
+      python    :36.23
+</code></pre></div></div>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:Brown1994">
+      <p>G. J. Brown and M. P. Cooke (1994) Computational auditory scene analysis. Computer Speech and Language, 8, pp. 297-336¬†<a href="#fnref:Brown1994" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

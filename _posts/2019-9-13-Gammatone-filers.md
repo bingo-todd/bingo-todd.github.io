@@ -7,88 +7,16 @@ author: Todd
 description: Gammatone filter
 ---
 
-<!-- TOC -->
-
-- [Gammatone-filters](#gammatone-filters)
-  - [Basic ideas](#basic-ideas-%5Eholdsworth1988)
-  - [Usage](#usage)
-  - [Buildin examples](#buildin-examples)
-  - [About efficiency](#about-efficiency)
-
-<!-- /TOC -->
 
 # Gammatone-filters
+
 Python implementation of Gammatone filter.
 
 The filtering part of code is written in C.
 
-## Basic ideas [^Holdsworth1988]
-The impulse response of Gammatone filter is defined as follow
+## Basic ideas
+[Gammatone implementation](2019-9-27-gtf_baseband_implementation.md)
 
-$$
-g(t) = \frac{at^{n-1}\cos(2\pi f_ct+\phi)}{e^{2\pi b t}}
-$$
-
-in which
-
-- $f_c$: center frequency
-- $b$= : bandwidth,
-
-$g(t)$ can be regarded as the mutliplication result of two parts,
-
-$$
-\begin{equation}
-\begin{aligned}
-g(t)&=a \times \underbrace{t^{n-1}e^{-2\pi bt}}_\text{r(t)} \times \underbrace{cos(2\pi f_c t+\phi)}_{s(t)}\\
-\end{aligned}
-\end{equation}
-$$
-
-Multiplication in time domain = convolution in frequency domain, so
-
-$$
-\begin{equation}
-\begin{aligned}
-R(f)=FT(t^{n-1}e^{-2\pi b t})
-&=\frac{1}{(j2\pi)^{n-1}}\frac{\partial^{n-1} FT(e^{-2\pi bt})}{\partial f^{n-1}}\\
-&=\frac{1}{(j2\pi)^{n-1}}\frac{\partial^{n-1}\frac{1}{2\pi b+j2\pi f}}{\partial f^{n-1}}\\
-&=\frac{1}{(j2\pi)^{n-1}}\frac{(j)^{n-1}(n-1)!}{2\pi}\frac{1}{(b+jf)^n}\\
-&=\frac{(n-1)!}{(2\pi b)^n}\frac{1}{(1+jf/b)^n} \label{eq:1}
-\end{aligned}
-\end{equation}
-$$
-
-$$
-\begin{equation}
-\begin{aligned}
-S(f)=FT\left(cos(2\pi f_ct+\phi)\right)
-&=e^{j\phi}\delta(f-f_c)+e^{-j\phi}\delta(f+f_c)
-\end{aligned}
-\end{equation}
-$$
-
-Combine equation (2) and (3), we can get $G(f)$
-
-$$
-\begin{equation}
-\begin{aligned}
-G(f)&=a \times R(f)*S(f)\\
-&=a \times e^{j\phi}\frac{(n-1)!}{(2\pi b)^n}\frac{1}{(1+j(f-f_c)/b)^n}+ae^{-j\phi}\frac{(n-1)!}{(2\pi b)^n}\frac{1}{(1+j(f+f_c)/b)^n}\\
-&=a\frac{(n-1)!}{(2\pi b)^n}\left[e^{j\phi}\left(\frac{1}{(1+j(f-f_c)/b)}\right)^n+e^{-j\phi}\left(\frac{1}{(1+j(f+f_c)/b)}\right)^n\right]
-\end{aligned}
-\end{equation}
-$$
-
-As shown in the following diagram,$G(f)$ consists of two symmetric parts. For simplicity, only positive frequency side is considered
-
-<center><img src="/assets/images/Gammatone-filters/gtf-ir-spectrum.png" width="60%"></center>
-
-Further more, Gammatone filter can be regarded as low-pass filter with frequency shitfted by fc. Now, equalently, we can first shift input signal by -fc and filter it with a lowpass filter, finally shift the frequency by fc.
-
-<center><img src=/assets/images/Gammatone-filters/diagram.png ></center>
-![diagram](/assets/images/Gammatone-filters/diagram.png)
-
- The detailed derivation is in [README.pdf](README.pdf)
 
 ## Usage
 
