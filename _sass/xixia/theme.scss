@@ -78,6 +78,18 @@ body {
     color: $article-color;
 }
 
+.article p {
+  line-height: 125%;
+}
+
+.article h1 {
+  line-height: 200%;
+}
+
+.article h2 {
+  line-height: 200%;
+}
+
 .article img {
     max-width:100%;
 }
