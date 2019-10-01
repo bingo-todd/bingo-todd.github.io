@@ -194,7 +194,7 @@ Gain_{f_c} &= \frac{3}{(2\pi b)^4}\frac{\sqrt{(16Q^4-24Q^2+2)^2+(8Q-32Q^3)^2}}{\
 不同中心频率处的增益和相移如下
 
 <figure align="center">
- <img src='/assets/images/gammatone_filters/delay_gain.png'>
+ <img src='/assets/images/gammatone_filters/gain_normalization/delay_gain.png'>
  <a name="gtf_diagram">  </a>
 </figure>
 

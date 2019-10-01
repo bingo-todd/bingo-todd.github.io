@@ -74,20 +74,9 @@ body {
 
 /* post style */
 .article {
-    font-size: 17px;
+    font-size: 18px;
+    font-family: cursive;
     color: $article-color;
-}
-
-.article p {
-  line-height: 125%;
-}
-
-.article h1 {
-  line-height: 200%;
-}
-
-.article h2 {
-  line-height: 200%;
 }
 
 .article img {
@@ -161,4 +150,23 @@ body {
 }
 .navbar-custom .icon-bar {
     background-color: $nav-bar-icon-bar;
+}
+
+
+// add by Todd
+.article p {
+  line-height: 125%;
+}
+
+.article h1 {
+  line-height: 200%;
+}
+
+.article h2 {
+  line-height: 200%;
+}
+
+.article table {
+  border-width: thick;
+  align:center;
 }

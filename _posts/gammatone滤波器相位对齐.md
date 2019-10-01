@@ -14,56 +14,48 @@ $$
 可以将 ($\ref{gtf_equation}$) 分成两部分:
 - 包络
 
-  $$
-  \begin{equation}
+  $$\begin{equation}
   \begin{aligned}
   g_{amp}(t) = a\frac{t^{n-1}}{e^{2\pi b t}}
   \end{aligned}
-  \end{equation}
-  $$
+  \end{equation}$$
 
 - 精细结构
 
-  $$
-  \begin{equation}
+  $$\begin{equation}
   \begin{aligned}
   g_{fine}(t) = \cos(2\pi f_ct+\phi)
   \end{aligned}
-  \end{equation}
-  $$
+  \end{equation}$$
 
-因此 $g(t)=g_{amp}(t)\times g_{fine}(t)$
+因此 $$g(t)=g_{amp}(t)\times g_{fine}(t)$$
 
 
 不同频带冲激响应的峰值位置不同，相位补偿则是将其对齐。计算峰值的位置
-$$
-\begin{equation}
+
+$$\begin{equation}
 \begin{aligned}
 \frac{\partial g_{amp}(t)}{\partial t} &\triangleq 0\\
 &= \frac{(n-1)t^{n-2}}{e^{2\pi bt}}-\frac{t^{n-1}2\pi b}{e^{2\pi bt}}\\
 &=\frac{t^{n-2}}{e^{2\pi bt}}(n-1-2\pi bt)
 \end{aligned}
-\end{equation}
-$$
+\end{equation}$$
 
 所以
 
-$$
-\begin{equation}
+$$\begin{equation}
 \begin{aligned}
 t_{max}=\frac{(n-1)}{2\pi b}
 \end{aligned}
-\end{equation}
-$$
+\end{equation}$$
 
 对 ($\ref{gtf_equation}$) 进行延时补偿，可以得到
-$$
-\begin{equation}
+
+$$\begin{equation}
 \begin{aligned}
 g_{phasef\_com}(t) = g_{amp}(t-\tau)g_{fine}(t)
 \end{aligned}
-\end{equation}
-$$
+\end{equation}$$
 
 冲击响应
 <img src='/assets/images/gtf_phase_compensation/irs_env_aligned.png'>
@@ -71,31 +63,27 @@ $$
 
 精细结构对齐
 
-$$
-\begin{equation}
+$$\begin{equation}
 \begin{aligned}
 \cos(2\pi f_ct+\phi)|_{t=t_{max}}& \triangleq 1
 \end{aligned}
-\end{equation}
-$$
-$\cos$的初始相位 $\phi$ 应该为
+\end{equation}$$
 
-$$
-\begin{equation}
+$$\cos$$的初始相位 $$\phi$$ 应该为
+
+$$\begin{equation}
 \begin{aligned}
 \phi = -2\pi f_c t_{max}+i2\pi, \quad i=0,\pm 1,\cdots
 \end{aligned}
-\end{equation}
-$$
-对于4阶gammatone滤波器来说，$\phi=-3\frac{f_c}{b}$
+\end{equation}$$
 
-$$
-\begin{equation}
+对于4阶gammatone滤波器来说，$$\phi=-3\frac{f_c}{b}$$
+
+$$\begin{equation}
 \begin{aligned}
 \int{G(f)e^{i\phi}}e^{i2\pi ft}=
 \end{aligned}
-\end{equation}
-$$
+\end{equation}$$
 
 
 <!-- 时域延时==频域乘以

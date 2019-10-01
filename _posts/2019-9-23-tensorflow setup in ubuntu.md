@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "tensorflow setup in ubuntu"
+categories: tools
+tags: tensorflow
+author: Todd
+description: setup tensroflow based deep learning environment
+---
+
 深度学习环境搭建
 
 步骤
@@ -84,7 +93,7 @@
 ## 安装cuDNN
 
   其实只需要将其中的文件copy到cuda安装目录下就可以了
-  
+
   ```shell
   sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
   sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/

@@ -33,7 +33,7 @@ description: setup static blog using jekyllw
   gem install jekyll bundler
   ```
 
-- Windows &nbsp; [(official doc)] (https://jekyllrb.com/docs/installation/windows/)
+- Windows &nbsp; [(official doc)](https://jekyllrb.com/docs/installation/windows/)
 
   主要过程
   - 安装gem
