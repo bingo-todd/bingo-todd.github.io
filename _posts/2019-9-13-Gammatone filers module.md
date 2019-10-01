@@ -31,6 +31,23 @@ Gammatone filter can be regarded as low-pass filter with frequency shitfted by c
 
 For details, see [digital filter design of gammatone filter](/work/2019/09/27/gtf_baseband_implementation.html), currently written in Chinese.
 
+## Compare to other module
+Detly has write a [python module](https://github.com/detly/gammatone) of gammatone filterbank based matlab code developed by Slaney.
+Using the sample settings, outputs of Detly module and current module are as follow:
+
+```
+fs=16kHz
+cfs = [100 393  948 2000] Hz
+```
+
+<table align="center">
+<tr> <td>Detly</td> <td> <img src='/assets/images/gammatone_filters/validate/reference.png'> </td> </tr>
+<tr>
+<td> Current </td> <td> <img src='/assets/images/gammatone_filters/validate/proposed.png'> </td>
+</tr>
+</table>
+
+
 ## Spectrum of filter
 
   Taking filter with $$f_c=4kHz$$ as example, the amplitude spectrum $$gain(f)$$ and phase spectrum $$\phi(f)$$ is plotted as follow
