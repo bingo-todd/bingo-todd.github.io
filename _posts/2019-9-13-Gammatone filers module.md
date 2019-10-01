@@ -37,8 +37,8 @@ For details, see [digital filter design of gammatone filter](/work/2019/09/27/gt
 
   <table align="center">
   <tr>
-  <td align=center> amp & phase </td>
-  <td align=center> amp & delay </td> </tr>
+  <td align="center"> amp & phase </td>
+  <td align="center"> amp & delay </td> </tr>
   <tr>
   <td> <img src='/assets/images/gammatone_filters/filter_spectrum/amp_phase_spectrum.png' width="400"> </td>
   <td> <img src='/assets/images/gammatone_filters/filter_spectrum/amp_delay_spectrum.png' width="400"> </td>
@@ -127,9 +127,9 @@ For details, see [digital filter design of gammatone filter](/work/2019/09/27/gt
 
   <table>
   <tr>
-  <td align=center> Not aligned </td>
-  <td align=center> Envelope aligned </td>
-  <td align=center> Envelop & fine structure aligned </td>
+  <td align="center"> Not aligned </td>
+  <td align="center"> Envelope aligned </td>
+  <td align="center"> Envelop & fine structure aligned </td>
   </tr>
   <tr>
   <td> <center> <img src='/assets/images/gammatone_filters/stimulus_restore/irs.png'> </center> </td>
