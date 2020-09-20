@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Baseband implementation of Gammatone filter"
+title:  "Implementation of Gammatone filter"
 categories: Work
 tags: dsp filter gammatone
 author: Todd
