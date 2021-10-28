@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Implementation of Gammatone filter"
+title:  "Gammatone滤波器的实现"
 categories: Work
 tags: dsp filter gammatone
 author: Todd
