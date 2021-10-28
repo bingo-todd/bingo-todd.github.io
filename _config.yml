@@ -31,3 +31,6 @@ markdown: kramdown
 plugins: [jekyll-paginate]
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
+
+live reload: True
+

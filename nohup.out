@@ -1,0 +1,36 @@
+Configuration file: /media/Disk2_1/Work_Space/Blog/bingo-todd.github.io/_config.yml
+            Source: /media/Disk2_1/Work_Space/Blog/bingo-todd.github.io
+       Destination: /media/Disk2_1/Work_Space/Blog/bingo-todd.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.637 seconds.
+/home/st/gems/gems/pathutil-0.16.2/lib/pathutil.rb:502: warning: Using the last argument as keyword parameters is deprecated
+ Auto-regeneration: enabled for '/media/Disk2_1/Work_Space/Blog/bingo-todd.github.io'
+      Regenerating: 1 file(s) changed at 2020-10-23 10:27:56
+                    _posts/2019-9-13-Github.md
+                    ...done in 0.230901735 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-10-23 10:28:28
+                    _posts/2019-9-13-Github.md
+                    ...done in 0.234465785 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-10-23 10:28:58
+                    _posts/2019-9-13-Github.md
+                    ...done in 0.236587085 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2020-10-23 10:29:29
+                    _posts/_site/2019-9-13-change python version .html
+                    _posts/_site/2019-11-7-GMMs.html
+                    _posts/_site/2019-9-23-tensorflow setup in ubuntu.html
+                    _posts/_site/2019-9-25-tensorflow tricks.html
+                    _posts/_site/2019-9-13-Github.html
+                    ...done in 0.49206366 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-10-23 10:30:25
+                    _posts/2019-9-13-Github.md
+                    ...done in 0.144131514 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-10-23 10:30:41
+                    _posts/2019-9-13-Github.md
+                    ...done in 0.160007216 seconds.
+                    
